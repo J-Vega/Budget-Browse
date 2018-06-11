@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Budget Browse</title>
+    <meta name="API - Awesome Product Index" content="Search for a product to view listings and reviews!">
+    <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">      
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="float-grid.css"/>
+    
+  </head>
+  <body id = "page">
+    <nav role= "banner">
+
+      <div class ="topContainer inlineTop"></div>
+      <h1 class ="title">
+        Welcome to Budget Browse
+      </h1>
+      <h2>
+        Select a category - Set a budget - Search for product
+      </h2>
+    </nav>
+
+  <main role= "main">
+
+  <form action="#" class="js-search-form">
+    <div class="row buttonContainer">
+      <div class="col-2 category noSelect inactive" id="computerButton" apiCategory="Computers">
+        <button role ="button" type="button" class="circulerButton noSelect computerButton"></button>
+        <p>
+          Computer
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+      
+      <div class="col-2 category noSelect inactive" apiCategory="Cell Phones">
+        <button role ="button" type="button" class="circulerButton noSelect mobileButton"></button>
+        <p>
+          Mobile
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+      
+      <div class="col-2 category noSelect inactive" apiCategory="Audio">
+        <button role ="button" type="button" class="circulerButton noSelect musicButton"></button>
+        <p>
+          Music
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+      
+      <div class="col-2 category noSelect inactive" apiCategory="TV">
+        <button role ="button" type="button" class="circulerButton noSelect televisionButton"></button>
+        <p>
+          Television
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+      
+      <div class="col-2 category noSelect inactive" apiCategory="Video Games">
+        <button role ="button" type="button" class="circulerButton noSelect gamingButton"></button>
+        <p>
+          Gaming
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+      
+      <div class="col-2 category noSelect inactive" apiCategory="Appliances">
+        <button role ="button" type="button" class="circulerButton noSelect applianceButton"></button>
+        <p>
+          Appliances
+        </p>
+        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+      </div>
+    </div>
+
+    <div class ="row">
+      <div class = "col-6">
+        <label for="form-budget">
+          Enter Spending Limit
+        </label>
+        <input type="number" min="1" id="form-budget" class ="js-query-budget searchBar" placeholder="70" required>
+      </div>
+
+      <div class = "col-6">
+        <label for="form-keyword">
+          Enter Search Term
+        </label>
+        <input type="text" id="form-keyword" class ="js-query searchBar" placeholder="Computer" required>
+      </div>
+
+      <button type ="submit" id= "searchButton" class ="searchButton">
+        <p id="searchButtonText"><!-- Begin Empty --></p>
+      </button>
+    </div>
+  </form>
+
+
+
+    </main>
+    
+
+    <!-- POP UP WINDOW -->
+      <div class="dialog" id="BESTBUYpopUpWindow" aria-live="assertive">
+        <input type="button" value="x" class ="backButton" id="backButtonBestBuy">
+      <div>
+        <form>
+          <p class="BESTBUYItemName"><!--Begin Empty--></p>
+            <div class="BESTBUYImage"><!--Begin Empty--></div>
+            <div class="BESTBUYPrice"><!--Begin Empty--></div>
+            <div class="BESTBUYDescription"><!--Begin Empty--></div>
+            
+            <label id="valueFromMyButton"><!--Begin Empty--></label>
+            
+        </form>
+      </div>
+      <div>
+        <div class="BESTBUYURL"><!--Begin Empty--></div>
+      </div>
+      </div>
+
+    <div class ="backFade"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
