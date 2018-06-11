@@ -1,0 +1,569 @@
+html {
+  min-height:100%;
+  background:linear-gradient(
+    to bottom,rgba(0,0,0,0.6),rgba(0,20,30,0.6)),url(http://earth911.com/wp-content/uploads/2016/07/online-shopping-940x627.jpg) no-repeat center center fixed;
+  background-size:cover;
+  margin: auto;
+  background-color: black;
+  font: small-caps 14px/1;
+  font-family: 'Kanit', sans-serif;
+
+  }
+
+input.js-query,input.js-query-budget{
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+  float: left;
+
+  border: 1px solid black;
+}
+
+
+body,h1{
+  margin: 0;
+}
+
+nav{
+  text-align: center; 
+}
+
+main{
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
+h1,h2,label{
+  text-align: center;
+  color: white;
+  font-weight: normal;
+}
+label{
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+form{
+  text-align: center;
+}
+
+span{
+  padding-right: 16px; 
+  padding-left: 16px; 
+}
+
+h3{
+  text-align: center;
+
+}
+
+.inlineTop{
+  display: inline-block;
+  /*width: 350px;*/
+  font-size: 10px;
+}
+
+.icon{
+  width: 100px;
+  height: 100px;
+}
+
+.topContainer{
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
+.arrow{
+  height: 25px;
+  width: 25px;
+}
+.show{
+  opacity: 1;
+}
+.buttonContainer{
+  padding-top: 16px;
+  border: 2px grey;
+  border-radius: 2px;
+  background-color: rgba(255,255,255,.8);
+}
+.inactive{
+  opacity: 0.7;
+}
+.inactive p{
+  color: grey;
+}
+
+.category:hover button,.category:hover p{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.active{
+  opacity: 1;
+}
+.active p{
+  color: black;
+  text-decoration: underline;
+}
+.hide{
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
+.searchBar{
+  margin-top: 18px;
+  margin-bottom:18px;
+  height: 32px;
+  font-size: 17px;
+  background: none;
+  border: none;
+  border: 1px solid #d5d5d5;
+  /*color: green;*/
+  background-color: rgba(255,255,255,.8);
+  width: 100%;
+}
+
+
+.searchBar::placeholder{
+  /*color: #DC143C;*/
+  margin-left: 5px;
+  opacity: 0.8;
+}
+
+.searchButton{
+  margin-top: 12px;
+  background-color: #6D7993;   
+  border:1px solid #333;
+  background:#6479fd;
+}
+
+.searchButton:hover{
+  background:#a4a9fd;
+}
+
+.searchButton {
+  border: 0;
+  background: #0087cc;
+  border-radius: 4px;
+/*  box-shadow: 0 5px 0 #2e3340;*/
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  /*outline: 0;*/
+  /*padding: 12px 20px;*/
+  transition: all .1s linear;
+  
+  width: 100%;
+}
+.searchButton:active {
+  /*box-shadow: 0 2px 0 #303644;*/
+  transform: translateY(3px);
+}
+#searchButtonText{
+  font-size: 18px;
+}
+
+
+.copiedimages{
+  text-align: center;
+}
+
+
+
+
+#loadingScreen{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 93px;
+}
+
+
+
+.bestbuy-result-block{
+  text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 16px;
+  background-color: white;/*#EAEAEA; */
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  border-radius: 4px;
+}
+
+.productName{
+  text-indent: 10px;
+}
+
+.result-block:hover{
+  box-shadow: 5px 5px 20px #041e42;
+  cursor: pointer;
+}
+
+
+.BESTBUYURL{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  border-top:2px solid black;
+  /*width: 50%;*/
+}
+.BESTBUYURL:hover{
+  background: #EAEAEA;
+}
+.BESTBUYURL a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.result-block{
+  border-radius: 16px; 
+  border: 2px solid #041e42;
+}
+
+
+
+.justify{
+  text-align: justify;
+}
+
+.BESTBUYItemName{
+  clear: left;
+  font-weight: bold;
+}
+
+.itemDescription{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-overflow: ellipsis;
+    max-height: 53px;
+    white-space: normal;
+    font-size: 18px;
+}
+
+.productURL a{
+  font-size: 20px;
+  color: #041e42;
+  padding: 4px;
+  font-weight: bold;
+  border: 2px solid #041e42;
+}
+
+.productURL a:hover{
+  color: white;
+  background-color: #041e42;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.etsy-result-block{
+  border-radius: 16px; 
+  border: 2px solid #f45800;
+}
+
+.etsy-orange{
+  color: white;
+  font-size: 26px;
+  background-color: #f45800;
+}
+
+.etsyURL a{
+  font-size: 20px;
+  color: #f45800;
+  padding: 4px;
+  font-weight: bold;
+  border: 2px solid #f45800;
+}
+
+.etsyURL a:hover{
+  color: white;
+  background-color: #f45800;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.result-block-YOUTUBE{
+  border-radius: 16px; 
+  border: 2px solid red;
+}
+
+.youtube-red{
+  color: white;
+  font-size: 26px;
+  background-color: #FF0000;
+}
+
+a{
+  text-decoration: none;
+  font-style: normal;
+}
+
+.thumbnail{
+  margin-top: 10px;
+  width: 70%;
+  /*border: 2px solid black; */
+  border-radius: 2px; 
+}
+
+.container{
+  height: 75%;
+  overflow: hidden;
+}
+.container img{
+  max-width: 100%;
+  max-height: 60%
+  -moz-transition: all 11s;
+  -webkit-transition: all 9s;
+  transition: all 0.5s;
+}
+.container:hover img{
+  /*-moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);*/
+  transform: scale(1.07);
+}
+
+
+.videoImage{
+  margin-top: 10px;
+  width: 80%;
+  border: 2px solid black; 
+  border-radius: 2px; 
+}
+
+.copiedimages img, .etsyImage img, .youtubeVideoImage img{
+  border: 2px solid black; 
+}
+
+.youtubeVideoImage{
+  margin: 20px;
+}
+
+.videoTitle{
+  max-height: 30px;
+}
+
+.videoDescription,.videoTitle{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dialog{  
+  background: rgba(0,0,0,0.8);
+  position:fixed;
+  display:none;
+}
+
+#BESTBUYpopUpWindow{
+  background-color: white;
+  border:5px solid #FF0000;
+  z-index: 20;
+  
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border: solid black;
+}
+input[type=text]{
+  /*border:1px solid #333;*/
+ /* display:inline-block;
+  margin:5px;*/
+}
+.half{
+  display: inline-block;
+}
+.backButton{
+  float: left;
+  font-size: 20px;
+  border:2px solid black;
+  background: #ff6044;
+  margin:5px;
+  margin-bottom: 6px;
+  
+}
+
+.backButton:hover{
+  border:2px solid #000;
+  background:red;
+}
+
+#itemNameButton{
+  max-width: 70%;
+}
+
+p{
+  font: small-caps 14px/1 sans-serif;
+  /*padding-left: 5%;
+  padding-right: 5%;*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.price, .productPrice p{
+  color: darkgreen;
+  font-size: 16px;
+  margin: 6px;
+}
+
+li{
+  font: small-caps bold 18px/1 sans-serif;
+}
+
+.youtubeVideoLink a:hover,.youtubeVideoChannel a:hover{
+  color: #FF0000;
+}
+
+.youtubeVideoDescription p{
+  color: black;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.italicized{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    top: 38px;
+}
+.BESTBUYImage{
+  height: 200px;
+    align-items:center;
+  }
+  .BESTBUYImage img{
+    height:100%;
+    max-width: 100%;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content p:hover{
+  cursor: pointer;
+}
+
+.block{
+  width: 20px;
+  height: 20px;
+  background-color: #6D7993;
+}
+.block2{
+  width: 20px;
+   height: 20px;
+  background-color: #D5D5D5;
+}
+.block3{
+  width: 20px;
+   height: 20px;
+  background-color: #9099A2;
+}
+
+.backFade{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.circulerButton{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+
+.selected{
+
+}
+.mobileButton{
+  /*Green solid #73b629 faded #90be5e*/
+  background-image: url(http://www.sunixusa.com/wp-content/uploads/2016/04/p191sbcpd71nvd1bqrd2b1jifqn34.jpg);
+  /*background-image: url(https://www.freepnglogos.com/uploads/mobile-circle-logo-png-30.png);*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  
+}
+.gamingButton{
+  /*grey solid #565656 faded #7e7e7e */
+  /*http://freevector.co/wp-content/uploads/2013/11/75524-video-game-controller.png*/
+  background-image: url(http://filmsxpress.com/userimages/404/images/Icon_Video%20Game.png);
+    background-repeat: no-repeat;
+    background-size: 150% 150%;
+    background-position: center;
+  
+}
+
+.computerButton{
+  /*blue solid #244e78 faded #5c7997 */
+  background-image: url(http://belajarkalkulus.com/wp-content/uploads/2017/09/video-2.png); 
+    background-repeat: no-repeat;
+    background-size: 115% 115%;
+    background-position: center;
+}
+
+.applianceButton{
+  /* blue solid #24458c faded #5c74a5*/
+  /*https://cdn.icon-icons.com/icons2/551/PNG/512/freezer_fridge_refrigerator_cold_kitchen_electrical_appliance_appliances_5_icon-icons.com_53504.png*/
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRza2i-ff_ieG-bAukSENWWFzqg3Vqh3o5HXA82iCxemYu61kzRXg);
+  background-repeat: no-repeat;
+  background-size: 105% 105%;
+  background-position: center;
+}
+
+.televisionButton{
+  /*red solid #c1282d faded #c55a5f */
+  background-image: url(http://theieltscoach.com/wp-content/uploads/2015/03/04-Useful-IELTS-Websites-For-Speaking-Materials.png);
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+  background-position: center;
+}
+
+.musicButton{
+  /*light green solid #107b10 faded #519953 */
+  background-image: url(https://into.hu/uploads/images/2014/05/24-14-19-mzl.ftmlvqqs.png);
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+  background-position: center;
+}
+.noSelect {/*prevents blue outline*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+   /* outline: none !important;*/
+}
