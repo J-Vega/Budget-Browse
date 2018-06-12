@@ -1,7 +1,7 @@
 html {
   min-height:100%;
   background:linear-gradient(
-    to bottom,rgba(0,0,0,0.6),rgba(0,20,30,0.6)),url(http://earth911.com/wp-content/uploads/2016/07/online-shopping-940x627.jpg) no-repeat center center fixed;
+    to bottom,rgba(0,0,0,0.6),rgba(0,20,30,0.6)),url(https://earth911.com/wp-content/uploads/2016/07/online-shopping-940x627.jpg) no-repeat center center fixed;
   background-size:cover;
   margin: auto;
   background-color: black;
@@ -508,7 +508,7 @@ li{
 }
 .mobileButton{
   /*Green solid #73b629 faded #90be5e*/
-  background-image: url(http://www.sunixusa.com/wp-content/uploads/2016/04/p191sbcpd71nvd1bqrd2b1jifqn34.jpg);
+  background-image: url(https://www.sunixusa.com/wp-content/uploads/2016/04/p191sbcpd71nvd1bqrd2b1jifqn34.jpg);
   /*background-image: url(https://www.freepnglogos.com/uploads/mobile-circle-logo-png-30.png);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -518,7 +518,7 @@ li{
 .gamingButton{
   /*grey solid #565656 faded #7e7e7e */
   /*http://freevector.co/wp-content/uploads/2013/11/75524-video-game-controller.png*/
-  background-image: url(http://filmsxpress.com/userimages/404/images/Icon_Video%20Game.png);
+  background-image: url(https://filmsxpress.com/userimages/404/images/Icon_Video%20Game.png);
     background-repeat: no-repeat;
     background-size: 150% 150%;
     background-position: center;
@@ -527,7 +527,7 @@ li{
 
 .computerButton{
   /*blue solid #244e78 faded #5c7997 */
-  background-image: url(http://belajarkalkulus.com/wp-content/uploads/2017/09/video-2.png); 
+  background-image: url(https://belajarkalkulus.com/wp-content/uploads/2017/09/video-2.png); 
     background-repeat: no-repeat;
     background-size: 115% 115%;
     background-position: center;
@@ -544,7 +544,7 @@ li{
 
 .televisionButton{
   /*red solid #c1282d faded #c55a5f */
-  background-image: url(http://theieltscoach.com/wp-content/uploads/2015/03/04-Useful-IELTS-Websites-For-Speaking-Materials.png);
+  background-image: url(https://theieltscoach.com/wp-content/uploads/2015/03/04-Useful-IELTS-Websites-For-Speaking-Materials.png);
   background-repeat: no-repeat;
   background-size: 120% 120%;
   background-position: center;
