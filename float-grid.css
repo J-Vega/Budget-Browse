@@ -1,5 +1,5 @@
 
-{
+html{
 	margin-left: 12px;
 	margin-right: 12px;
 }
@@ -14,7 +14,6 @@
   margin-left: auto;
   margin-top: 15px;
 }
-
 
 .row::before,
 .row::after {
@@ -32,9 +31,11 @@
 		float: left;
 		width: 100%;
 	}
+
 	.productName{
 		font-size: 16px;
 	}
+	
 	.source-header{
   		margin-top: 12px;
 	}
