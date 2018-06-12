@@ -71,6 +71,9 @@ html{
 		width: 80%;
 		height: 80%;
 	}
+	.searchButton{
+		margin: 24px 0px 24px 0px;
+	}
 
 }
 
@@ -123,7 +126,10 @@ html{
 	margin-top: 35px;
 	float: left;
 	width: 50%;
-}
+	}
+.searchButton{
+	margin: 0;
+	}
 .BESTBUYImage{
   height: 150px;
     align-items:center;
