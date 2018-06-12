@@ -102,14 +102,22 @@
   </form>
 
 
+  <div id = "listingsParent"> <!-- This ID is used by hideBackground function to hide product listing from screen reader when a pop up window is displayed -->
+
+       
+        <!-- BEST BUY-->
+        <!-- <h3 class="source-header">Best Buy Listing</h3> -->
+        <div class ="row clickForPopUpBESTBUY js-search-results-BESTBUY"></div>
+
+      </div>
+
 
     </main>
-    
+    <script src="index.js"></script>
 
-    <!-- POP UP WINDOW -->
-      <div class="dialog" id="BESTBUYpopUpWindow" aria-live="assertive">
-        <input type="button" value="x" class ="backButton" id="backButtonBestBuy">
-      <div>
+    <!-- BEST BUY POP UP WINDOW -->
+      <div class="dialog" id="BESTBUYpopUpWindow" aria-live="assertive"><span><input type="button" value="x" class ="backButton" id="backButtonBestBuy"></span>
+        <div>
         <form>
           <p class="BESTBUYItemName"><!--Begin Empty--></p>
             <div class="BESTBUYImage"><!--Begin Empty--></div>
@@ -126,6 +134,5 @@
       </div>
 
     <div class ="backFade"></div>
-    <script src="index.js"></script>
   </body>
 </html>
