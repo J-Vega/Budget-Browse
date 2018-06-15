@@ -2,7 +2,7 @@
   #### By: Jonathan Vega
   
 ## Description
-### This app will allow you to set a spending limit and search product listings with Best Buy's API.
+### This site will allow you to set a spending limit and search product listings with Best Buy's API.
 
 ## Live Link
 ### [https://j-vega.github.io/Budget-Browse/](https://j-vega.github.io/Budget-Browse/)
