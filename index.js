@@ -60,7 +60,6 @@ $(function() {
     $("#backButtonBestBuy").click(function() {
       if(isPopUpDisplaying === true){
         isPopUpDisplaying=false;
-        console.log(isPopUpDisplaying);
         showListingToScreenReader();
         $("#BESTBUYpopUpWindow").hide();
         $(".backFade").hide();
@@ -222,25 +221,20 @@ function BESTBUYgetDataFromApi(searchTerm,budget,callback){
     apiKey: apiKey_BESTBUY,
     keyword: `(search=${searchTerm})`,
     format: 'json' 
-    
   };
-  console.log(budget);
+
   const tempUrl = 'https://api.bestbuy.com/v1/products((search='+searchTerm+')&regularPrice<'+budget+'&categoryPath.name='+listingCategory+'*)?apiKey=vrjst2v5zsgemp3jq44xwmz9&sort=regularPrice.desc&show=bestSellingRank,name,url,regularPrice,shortDescription,longDescription,image&pageSize=12&format=json';
-  console.log(tempUrl);
   $.getJSON(tempUrl,callback);
 } 
 
 function BESTBUYdisplaySearchData(data){
-    showSections();
-    const results = data.products.map((item,index) => BESTBUYrenderResults(item,index));
-    console.log(results);
+  const results = data.products.map((item,index) => BESTBUYrenderResults(item,index));
   $('.js-search-results-BESTBUY').html(results);
 }
 
 function BESTBUYrenderResults(results,index){
+  showSections();
   BESTBUYaddProductToListing(results);
-  console.log(results);
-  console.log(index);
   return `<div class="bestbuy-result-block col-4" item-index="${index}">
   <p aria-label="[Product Name]" class = "productName" >${results.name}</p>
   <div class="container"> <img aria-hidden = "true" class ="thumbnail" src="${results.image}"></div> 
