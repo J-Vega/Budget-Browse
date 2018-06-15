@@ -24,16 +24,20 @@ body,h1{
   margin: 0;
 }
 
-nav{
-  text-align: center; 
-}
-
 main{
+  text-align: center; 
   padding-top: 90px;
   padding-bottom: 20px;
 }
+.title{
+  font-size: 26px;
+}
 
-h1,h2,label{
+.subTitle{
+  font-size: 20px;
+}
+
+h1,h2,h3,label{
   text-align: center;
   color: white;
   font-weight: normal;
@@ -111,8 +115,8 @@ h3{
   opacity: 1;
 }
 .searchBar{
-  margin-top: 18px;
-  margin-bottom:18px;
+  margin-top: 15px;
+  margin-bottom:15px;
   height: 32px;
   font-size: 17px;
   background: none;
