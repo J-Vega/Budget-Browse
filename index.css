@@ -1,4 +1,4 @@
-html {
+html{
   min-height:100%;
   background:linear-gradient(
     to bottom,rgba(0,0,0,0.6),rgba(0,20,30,0.6)),url(https://earth911.com/wp-content/uploads/2016/07/online-shopping-940x627.jpg) no-repeat center center fixed;
@@ -7,8 +7,7 @@ html {
   background-color: black;
   font: small-caps 14px/1;
   font-family: 'Kanit', sans-serif;
-
-  }
+}
 
 input.js-query,input.js-query-budget{
   height: 50px;
@@ -19,25 +18,30 @@ input.js-query,input.js-query-budget{
   border-radius: 2px;
 }
 
-
 body,h1{
   margin: 0;
 }
 
-nav{
-  text-align: center; 
-}
-
 main{
+  text-align: center; 
   padding-top: 90px;
   padding-bottom: 20px;
 }
 
-h1,h2,label{
+.title{
+  font-size: 26px;
+}
+
+.subTitle{
+  font-size: 20px;
+}
+
+h1,h2,h3,label{
   text-align: center;
   color: white;
   font-weight: normal;
 }
+
 label{
   
   font-size: 22px;
@@ -52,14 +56,8 @@ span{
   padding-left: 16px; 
 }
 
-h3{
-  text-align: center;
-
-}
-
 .inlineTop{
   display: inline-block;
-  /*width: 350px;*/
   font-size: 10px;
 }
 
@@ -73,22 +71,27 @@ h3{
   text-align: center;
   padding: 10px;
 }
+
 .arrow{
   height: 25px;
   width: 25px;
 }
+
 .show{
   opacity: 1;
 }
+
 .buttonContainer{
   padding-top: 16px;
   border: 2px grey;
   border-radius: 2px;
   background-color: rgba(255,255,255,.8);
 }
+
 .inactive{
   opacity: 0.7;
 }
+
 .inactive p{
   color: grey;
 }
@@ -97,35 +100,38 @@ h3{
   text-decoration: underline;
   cursor: pointer;
 }
+
 .active{
   opacity: 1;
 }
+
 .active p{
   color: black;
   text-decoration: underline;
 }
+
 .hide{
   opacity: 0;
 }
+
 .show{
   opacity: 1;
 }
+
 .searchBar{
-  margin-top: 18px;
-  margin-bottom:18px;
+  margin-top: 15px;
+  margin-bottom:15px;
   height: 32px;
   font-size: 17px;
   background: none;
   border: none;
   border: 1px solid #d5d5d5;
-  /*color: green;*/
   background-color: rgba(255,255,255,.8);
   width: 100%;
 }
 
 
 .searchBar::placeholder{
-  /*color: #DC143C;*/
   margin-left: 5px;
   opacity: 0.8;
 }
@@ -144,41 +150,25 @@ h3{
   border: 0;
   background: #0087cc;
   border-radius: 4px;
-/*  box-shadow: 0 5px 0 #2e3340;*/
   color: #fff;
   cursor: pointer;
   font: inherit;
   margin: 0;
-  /*outline: 0;*/
-  /*padding: 12px 20px;*/
   transition: all .1s linear;
-  
   width: 100%;
 }
+
 .searchButton:active {
-  /*box-shadow: 0 2px 0 #303644;*/
   transform: translateY(3px);
 }
+
 #searchButtonText{
   font-size: 18px;
 }
 
-
 .copiedimages{
   text-align: center;
 }
-
-
-
-
-#loadingScreen{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 93px;
-}
-
-
 
 .bestbuy-result-block{
   text-align: center;
@@ -186,7 +176,7 @@ h3{
   margin-left: auto;
   margin-right:auto;
   margin-top: 16px;
-  background-color: white;/*#EAEAEA; */
+  background-color: white;
   text-align: center;
   text-decoration: none;
   font-style: normal;
@@ -202,7 +192,6 @@ h3{
   cursor: pointer;
 }
 
-
 .BESTBUYURL{
   position: absolute;
   bottom: 0px;
@@ -211,11 +200,12 @@ h3{
   padding: 10px;
   text-align: center;
   border-top:2px solid black;
-  /*width: 50%;*/
 }
+
 .BESTBUYURL:hover{
   background: #EAEAEA;
 }
+
 .BESTBUYURL a:hover{
   cursor: pointer;
   text-decoration: underline;
@@ -226,8 +216,6 @@ h3{
   border-radius: 16px; 
   border: 2px solid #041e42;
 }
-
-
 
 .justify{
   text-align: justify;
@@ -262,43 +250,6 @@ h3{
   font-weight: bold;
 }
 
-.etsy-result-block{
-  border-radius: 16px; 
-  border: 2px solid #f45800;
-}
-
-.etsy-orange{
-  color: white;
-  font-size: 26px;
-  background-color: #f45800;
-}
-
-.etsyURL a{
-  font-size: 20px;
-  color: #f45800;
-  padding: 4px;
-  font-weight: bold;
-  border: 2px solid #f45800;
-}
-
-.etsyURL a:hover{
-  color: white;
-  background-color: #f45800;
-  padding: 4px;
-  font-weight: bold;
-}
-
-.result-block-YOUTUBE{
-  border-radius: 16px; 
-  border: 2px solid red;
-}
-
-.youtube-red{
-  color: white;
-  font-size: 26px;
-  background-color: #FF0000;
-}
-
 a{
   text-decoration: none;
   font-style: normal;
@@ -307,7 +258,6 @@ a{
 .thumbnail{
   margin-top: 10px;
   width: 70%;
-  /*border: 2px solid black; */
   border-radius: 2px; 
 }
 
@@ -315,6 +265,7 @@ a{
   height: 75%;
   overflow: hidden;
 }
+
 .container img{
   max-width: 100%;
   max-height: 60%
@@ -322,9 +273,8 @@ a{
   -webkit-transition: all 9s;
   transition: all 0.5s;
 }
+
 .container:hover img{
-  /*-moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);*/
   transform: scale(1.07);
 }
 
@@ -336,22 +286,8 @@ a{
   border-radius: 2px; 
 }
 
-.copiedimages img, .etsyImage img, .youtubeVideoImage img{
+.copiedimages img{
   border: 2px solid black; 
-}
-
-.youtubeVideoImage{
-  margin: 20px;
-}
-
-.videoTitle{
-  max-height: 30px;
-}
-
-.videoDescription,.videoTitle{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .dialog{  
@@ -364,7 +300,6 @@ a{
   background-color: white;
   border:5px solid #FF0000;
   z-index: 20;
-  
   height: 50%;
   overflow: auto;
   margin: auto;
@@ -372,14 +307,11 @@ a{
   top: 0; left: 0; bottom: 0; right: 0;
   border: solid black;
 }
-input[type=text]{
-  /*border:1px solid #333;*/
- /* display:inline-block;
-  margin:5px;*/
-}
+
 .half{
   display: inline-block;
 }
+
 .backButton{
   float: left;
   font-size: 20px;
@@ -401,8 +333,6 @@ input[type=text]{
 
 p{
   font: small-caps 14px/1 sans-serif;
-  /*padding-left: 5%;
-  padding-right: 5%;*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -418,16 +348,6 @@ li{
   font: small-caps bold 18px/1 sans-serif;
 }
 
-.youtubeVideoLink a:hover,.youtubeVideoChannel a:hover{
-  color: #FF0000;
-}
-
-.youtubeVideoDescription p{
-  color: black;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-}
-
 .italicized{
   font-style: italic;
 }
@@ -435,7 +355,6 @@ li{
 .bold{
   font-weight: bold;
 }
-
 
 .dropdown {
     position: relative;
@@ -452,18 +371,21 @@ li{
     z-index: 1;
     top: 38px;
 }
+
 .BESTBUYImage{
   height: 200px;
     align-items:center;
-  }
-  .BESTBUYImage img{
-    height:100%;
-    max-width: 100%;
-  }
+}
+
+.BESTBUYImage img{
+  height:100%;
+  max-width: 100%;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown-content p:hover{
   cursor: pointer;
 }
@@ -501,40 +423,34 @@ li{
   border-radius: 50%;
 }
 
-
-.selected{
-
-}
+/*Color codes noted in corresponding categories for reference*/
 .mobileButton{
   /*Green solid #73b629 faded #90be5e*/
   background-image: url(https://lh3.googleusercontent.com/HVfp0ZfqV58omCoeDvDPKRFBVTQSiCJlR7Osh9gJkr-2kJjWvrgGibsudXLvFh_rq8D5DTRRX5nthI-xk5k50zltbe0jPlbNYIbKaqdzY-v3q5cd2RHB2EDZ1Df2G_I1uwUR-4z0kEBcx_z83Gvv8FYJOUK-KMsVZkEshM3k979MBhmHlsvI_QqHYuqmihoklyKor0NWyz1Iof-cj5DqQ-FcgBfyFp4ijXTELgeQhmSFkgwPeN31nlcS1YPh_oZ1bxYMZXTfJVRExv7V5FygZMQNGnfySfWsKWnwddPOuMPIzWPudDSYGdmUTvJ42Kb1t0WuzzxL0guH_CGCnjl4n0i2MSF2CANW0q6b-vDnelwwRQflUeymvbJ9XqSBZdR9WUAl8s6vHwbkp2WBM81SVwQiZhyduhSgblaKv9Pl3oqQE8VaxY40ZeM7P0ssKxMiZN6v_fDPI8_lIJ6fRfajv4aNPwbzCGn59zTi97ow3kr72YQ5vJVhd3YKEjHQaLrCwrUTZMsioNdIeH8UTQ3Y4PZDOQta2QUxiWPSTfRVFNvpyYmOe2t0iS5WUcEIZN-P047xDrbcaEiKUMa1Ly1bbeQ_JDOn89A66zgQVQ=s1181-no);
-  /*background-image: url(https://www.freepnglogos.com/uploads/mobile-circle-logo-png-30.png);*/
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
   
 }
 .gamingButton{
   /*grey solid #565656 faded #7e7e7e */
-  /*http://freevector.co/wp-content/uploads/2013/11/75524-video-game-controller.png*/
   background-image: url(https://filmsxpress.com/userimages/404/images/Icon_Video%20Game.png);
-    background-repeat: no-repeat;
-    background-size: 150% 150%;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
+  background-position: center;
   
 }
 
 .computerButton{
   /*blue solid #244e78 faded #5c7997 */
   background-image: url(https://lh3.googleusercontent.com/r4Zv860drvwwm7Oaq0ktrkYdWdM2XNGj8q5uLq4A2nL-yFqIP7Q8x3wPgpysSzpJsnEvnFd-V6UrqR00mHk4xyLBIw5KVT9fDJotSOOsjJQdpnQViKNEsz3NrewoOZeLzFES80j3MZ55qaORAcxJ4xvfB4QtjGlhooDYb-X3Ff4419_x51XBqFECue2sOJSla6-oyXW5xiNAqtXkadfXqPbR5CjyvtO_-8WTKIsARCAU62W44Vufr6mrJuuLT99_D4kCzXjL01RCEhVJTX_3SZnkTL7HfHOtu_2jeMOLewE3g34a8OqQp_F9cx6GEOP7POu29gavj8NBJjB1WFG2FLw1qCsoAFusycnLotZS6gEOqdOsBrO-xG4maC7gXAnzl4yPl_nnRdyK_8Q5C1eHza2tmIUyqD-NC_iDWh062OqlmEByabQKt_2kAKapFPtOGQymNzEo339WmFMJClEGwtKeDj1AiNvZRm5xjhubpgTvmE6BeTzJvRx-bjRS8owT4wXS3NoaJ8fey60WSRiadqiyOvRBNVxffwhWEaf9l9JI_KiJlzGq0FVSYCojztPpW_lEJfXSVRQnj65Iveb15uB-Eb6-U3sIWKKZ7g=s640-no); 
-    background-repeat: no-repeat;
-    background-size: 115% 115%;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: 115% 115%;
+  background-position: center;
 }
 
 .applianceButton{
   /* blue solid #24458c faded #5c74a5*/
-  /*https://cdn.icon-icons.com/icons2/551/PNG/512/freezer_fridge_refrigerator_cold_kitchen_electrical_appliance_appliances_5_icon-icons.com_53504.png*/
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRza2i-ff_ieG-bAukSENWWFzqg3Vqh3o5HXA82iCxemYu61kzRXg);
   background-repeat: no-repeat;
   background-size: 105% 105%;
@@ -556,7 +472,7 @@ li{
   background-size: 120% 120%;
   background-position: center;
 }
-.noSelect {/*prevents blue outline*/
+.noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -564,5 +480,4 @@ li{
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-   /* outline: none !important;*/
 }
