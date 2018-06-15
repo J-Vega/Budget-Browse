@@ -11,7 +11,7 @@
 
 Step 1 - Choose a category by clicking on one of the icons or category name. The current category will display a black arrow underneath
   itself, while the inactive categories will slightly fade out.
-  [Choosing a Category](GuideImages/Step 1.png)
+  [Choosing a Category](GuideImages/Step_1.png)
   
 Step 2 - Set a spending limit. 
 
