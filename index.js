@@ -1,11 +1,10 @@
 
 
 const searchUrl_BESTBUY = "https://api.bestbuy.com/v1/products";
-// (name=${searchValue}*&productTemplate=${selectedCategory})";
 const apiKey_BESTBUY = "vrjst2v5zsgemp3jq44xwmz9";
+
+//Changed when clicking category buttons. Used to change searchbutton color and text, as well as placeholders.
 let listingCategory = ``;
-
-
 
 //Used to display rendered results in pop up windows
 let listings_BESTBUY = [];
@@ -44,19 +43,14 @@ $(function() {
       if(isPopUpDisplaying === false)
     { 
     isPopUpDisplaying = true;
-
-
-
       const itemIndex = BESTBUYgetIndexFromElement(event.currentTarget);
      
-
+        hideListingFromScreenReader();
         $('.BESTBUYItemName').text(listings_BESTBUY[itemIndex].name);
         $('.BESTBUYImage').html(displayItemImage($(event.currentTarget).find(".thumbnail").attr("src")));
-         $('.BESTBUYPrice').html(displayItemPrice(listings_BESTBUY[itemIndex].price));
-         $('.BESTBUYDescription').html(displayItemDescription(listings_BESTBUY[itemIndex].description));
-         console.log(listings_BESTBUY[itemIndex].link);
-         $('.BESTBUYURL').html(displayItemURL(listings_BESTBUY[itemIndex].link));
-          hideListingFromScreenReader();
+        $('.BESTBUYPrice').html(displayItemPrice(listings_BESTBUY[itemIndex].price));
+        $('.BESTBUYDescription').html(displayItemDescription(listings_BESTBUY[itemIndex].description));
+        $('.BESTBUYURL').html(displayItemURL(listings_BESTBUY[itemIndex].link));
         $("#BESTBUYpopUpWindow").show();
         $(".backFade").show();
       }else{}
@@ -66,7 +60,6 @@ $(function() {
     $("#backButtonBestBuy").click(function() {
       if(isPopUpDisplaying === true){
         isPopUpDisplaying=false;
-        console.log(isPopUpDisplaying);
         showListingToScreenReader();
         $("#BESTBUYpopUpWindow").hide();
         $(".backFade").hide();
@@ -99,7 +92,6 @@ $('.category').on('click',function(event){
   $('.category').find('img').removeClass('show');
   $(this).find('img').addClass('show');
 
-  //const itemIndexString = $(item).closest('.result-block').attr('item-index');
   listingCategory = $(this).closest('.category').attr('apiCategory');
   updatePlaceholder(listingCategory);
   
@@ -109,35 +101,31 @@ $('.category').on('click',function(event){
 });
 
 function changeFontColor(category){
-  //form-budget
   
   if(category === "Audio") {
-    
     document.getElementById("searchButton").style.background = "#107b10";
     document.getElementById("searchButtonText").innerHTML = "Search Music, MP3s, Accessories, and more!";
-    //document.getElementById("form-budget::placeholder") = "#107b10";
   }
-    else if(category === "Appliances") {
-      document.getElementById("searchButton").style.background = "#24458c";
-      document.getElementById("searchButtonText").innerHTML = "Search Kitchen, Indoor, Outdoor, and other Appliances!";
-    }
-    else if(category === "Video Games") {
-      document.getElementById("searchButton").style.background = "#565656";
-      document.getElementById("searchButtonText").innerHTML = "Search Video Games, Consoles, and more!";
-    }
-    else if(category === "TV") {
-      document.getElementById("searchButton").style.background = "#c1282d";
-      document.getElementById("searchButtonText").innerHTML = "Search Televisions, Movies, and more!";
-    }
-    else if(category === "Cell Phones") {
-      document.getElementById("searchButton").style.background = "#73b629";
-      document.getElementById("searchButtonText").innerHTML = "Search Cell Phones, Accessories, and more!";
-    }
-    else if(category === "Computers") {
-      document.getElementById("searchButton").style.background = "#244e78";
-      document.getElementById("searchButtonText").innerHTML = "Search Computer Hardware, Software, and more!";
-    }
-
+  else if(category === "Appliances") {
+    document.getElementById("searchButton").style.background = "#24458c";
+    document.getElementById("searchButtonText").innerHTML = "Search Kitchen, Indoor, Outdoor, and other Appliances!";
+  }
+  else if(category === "Video Games") {
+    document.getElementById("searchButton").style.background = "#565656";
+    document.getElementById("searchButtonText").innerHTML = "Search Video Games, Consoles, and more!";
+  }
+  else if(category === "TV") {
+    document.getElementById("searchButton").style.background = "#c1282d";
+    document.getElementById("searchButtonText").innerHTML = "Search Televisions, Movies, and more!";
+  }
+  else if(category === "Cell Phones") {
+    document.getElementById("searchButton").style.background = "#73b629";
+    document.getElementById("searchButtonText").innerHTML = "Search Cell Phones, Accessories, and more!";
+  }
+  else if(category === "Computers") {
+    document.getElementById("searchButton").style.background = "#244e78";
+    document.getElementById("searchButtonText").innerHTML = "Search Computer Hardware, Software, and more!";
+  }
 }
 
 function updatePlaceholder(category){
@@ -170,36 +158,13 @@ function watchSubmit() {
     const queryTarget = $(event.currentTarget).find('.js-query');
     const query = queryTarget.val();
     const budget = $(event.currentTarget).find('.js-query-budget').val();  
-      retrieveData(query,budget);
-    
-
+    retrieveData(query,budget);
+  
   });
 }
 
 function resetForms(){ 
   window.scrollTo(0,0);
-}
-
-
-function showLoadingScreen(query){
-
-  if(isLoading === false){
-    isLoading = true;
-    
-    var delay = 4500;
-
-    $('.searchResponse').html(displayLoadingMessage(query));
-    $("#loadingScreen").show(0);
-    $("#loadingScreen").delay(delay).fadeOut(150);
-    
-    setTimeout(function(){
-        isLoading = false;
-    }, delay);
-  }
-  else{
-    //Nothing
-  }
-    
 }
 
 function hideSections(){
@@ -212,8 +177,6 @@ function showSections(){
 
 hideSections();
 
-
-
 //---------- SCREEN READER FUNCTIONS----------
 
 function hideListingFromScreenReader(){ //Causes screen reader to ignore listings when pop up is displayed
@@ -223,7 +186,6 @@ function hideListingFromScreenReader(){ //Causes screen reader to ignore listing
 function showListingToScreenReader(){ //When pop up is exit, show listings to screen reader
   document.getElementById("listingsParent").setAttribute("aria-hidden",false);
 }
-
 
 
 // ---------    POP UP WINDOW FUNCTIONS       ------//
@@ -247,12 +209,11 @@ function displayItemPrice(price){
   return ` <p class="price bold" aria-label="[Price]">$${price} </p>`;
 }
 function displayLoadingMessage(searchTerm){
-  //return `<p>Searching for ${searchTerm}</p>`;
   return `<p>"Searching for ${searchTerm}"</p>`;
 }
 
 
-//-------------- BEST BUY API -------//
+//-------- BEST BUY API -------//
 
 function BESTBUYgetDataFromApi(searchTerm,budget,callback){
   resetListing();
@@ -260,26 +221,20 @@ function BESTBUYgetDataFromApi(searchTerm,budget,callback){
     apiKey: apiKey_BESTBUY,
     keyword: `(search=${searchTerm})`,
     format: 'json' 
-    
   };
-  console.log(budget);
+
   const tempUrl = 'https://api.bestbuy.com/v1/products((search='+searchTerm+')&regularPrice<'+budget+'&categoryPath.name='+listingCategory+'*)?apiKey=vrjst2v5zsgemp3jq44xwmz9&sort=regularPrice.desc&show=bestSellingRank,name,url,regularPrice,shortDescription,longDescription,image&pageSize=12&format=json';
-  console.log(tempUrl);
   $.getJSON(tempUrl,callback);
 } 
 
 function BESTBUYdisplaySearchData(data){
-    //console.log(data);
-    //$().html(BESTBUYrenderResults)
-    const results = data.products.map((item,index) => BESTBUYrenderResults(item,index));
-    console.log(results);
+  const results = data.products.map((item,index) => BESTBUYrenderResults(item,index));
   $('.js-search-results-BESTBUY').html(results);
 }
 
 function BESTBUYrenderResults(results,index){
+  showSections();
   BESTBUYaddProductToListing(results);
-  console.log(results);
-  console.log(index);
   return `<div class="bestbuy-result-block col-4" item-index="${index}">
   <p aria-label="[Product Name]" class = "productName" >${results.name}</p>
   <div class="container"> <img aria-hidden = "true" class ="thumbnail" src="${results.image}"></div> 
@@ -294,7 +249,6 @@ function BESTBUYaddProductToListing(listing){
     'price': listing.regularPrice, 
     'description':listing.longDescription, 
     'link':listing.url});
-    //'rating':listing.customerRating});    
 }
 
 $(watchSubmit);
