@@ -255,7 +255,7 @@ function displayLoadingMessage(searchTerm){
 //-------------- BEST BUY API -------//
 
 function BESTBUYgetDataFromApi(searchTerm,budget,callback){
-  console.log(searchUrl_BESTBUY);
+  resetListing();
   const query = {
     apiKey: apiKey_BESTBUY,
     keyword: `(search=${searchTerm})`,
