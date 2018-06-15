@@ -442,10 +442,10 @@ li{
 }
 
 .computerButton{
-  /*grey solid #adadad faded #b8b8b8 */
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKOE04kwVpUafdHbwGZkjjgBiYXlJMN1ECWGSVeb3yDmoI24xI);
+  /*grey solid #4e5c72 faded #b8b8b8 */
+  background-image: url(https://webplus.com.br/wp-content/uploads/2016/11/computer.png);
   background-repeat: no-repeat;
-  background-size: 115% 115%;
+  background-size: 100% 100%;
   background-position: center;
 }
 
