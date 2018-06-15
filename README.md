@@ -10,8 +10,7 @@
 ## Tools Used:
    - HTML
    - CSS
-   - JS
-   - Jquery
+   - jQuery
    
 ## Guide
 
