@@ -11,7 +11,7 @@
 
 Step 1 - Choose a category by clicking on one of the icons or category name. The current category will display a black arrow underneath
   itself, while the inactive categories will slightly fade out.
-  [Choosing a Category](GuideImages/Step_1.png)
+ ![ScreenShot](https://github.com/J-Vega/Budget-Browse/blob/master/GuideImages/Step%201.png?raw=true)
   
 Step 2 - Set a spending limit. 
 
