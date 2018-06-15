@@ -119,11 +119,11 @@ function changeFontColor(category){
     document.getElementById("searchButtonText").innerHTML = "Search Televisions, Movies, and more!";
   }
   else if(category === "Cell Phones") {
-    document.getElementById("searchButton").style.background = "#73b629";
+    document.getElementById("searchButton").style.background = "#ff5500";
     document.getElementById("searchButtonText").innerHTML = "Search Cell Phones, Accessories, and more!";
   }
   else if(category === "Computers") {
-    document.getElementById("searchButton").style.background = "#244e78";
+    document.getElementById("searchButton").style.background = "#adadad";
     document.getElementById("searchButtonText").innerHTML = "Search Computer Hardware, Software, and more!";
   }
 }
