@@ -130,7 +130,6 @@ span{
   width: 100%;
 }
 
-
 .searchBar::placeholder{
   margin-left: 5px;
   opacity: 0.8;
@@ -197,10 +196,6 @@ span{
 }
 
 .BESTBUYURL{
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0;
   padding: 10px;
   text-align: center;
   border-top:2px solid black;
@@ -234,7 +229,6 @@ span{
     margin-left: 20px;
     margin-right: 20px;
     text-overflow: ellipsis;
-    max-height: 53px;
     white-space: normal;
     font-size: 18px;
 }
