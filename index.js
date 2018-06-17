@@ -266,7 +266,7 @@ function updateListingHeader(){
   //const budget = $(event.currentTarget).find('.js-query-budget').val();  
   const budget = $('html').find('#form-budget').val();
   if(listings_BESTBUY.length > 0){
-    document.getElementById("listing-header").innerHTML = `Search results for ${keyword} under $${budget}`;
+    document.getElementById("listing-header").innerHTML = `Search results for '${keyword}' under $${budget}`;
   }
   else{
     document.getElementById("listing-header").innerHTML = `No results in this category for '${keyword}' under $${budget}. Try something else!`;
