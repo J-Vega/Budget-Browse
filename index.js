@@ -15,6 +15,9 @@ let isPopUpDisplaying = false;
 //Toggled while searching to prevent multiple queries from stacking on one another.
 let isLoading = false;
 
+//Used to update listing header
+let keyword = '';
+
 //Search placeholder changes suggestions when choosing a category
 currentPlaceholder = [];
 
@@ -129,21 +132,14 @@ function changeFontColor(category){
 }
 
 function updatePlaceholder(category){
+  $('html').find('#form-keyword').val("");
+
   if(category === "Audio") currentPlaceholder = placeholderGroups.audio;
   else if(category === "Appliances") currentPlaceholder = placeholderGroups.appliance;
   else if(category === "Video Games") currentPlaceholder = placeholderGroups.gaming;
   else if(category === "TV") currentPlaceholder = placeholderGroups.television;
   else if(category === "Cell Phones") currentPlaceholder = placeholderGroups.mobile;
   else if(category === "Computers") currentPlaceholder = placeholderGroups.computer;
-}
-
-function retrieveData(query,budget){
-    BESTBUYgetDataFromApi(query,budget,BESTBUYdisplaySearchData);
-}
-
-function BESTBUYgetIndexFromElement(item){
-  const itemIndexString = $(item).closest('.bestbuy-result-block').attr('item-index');
-  return parseInt(itemIndexString,10);
 }
 
 function resetListing(){
@@ -157,6 +153,7 @@ function watchSubmit() {
 
     const queryTarget = $(event.currentTarget).find('.js-query');
     const query = queryTarget.val();
+    keyword = query;
     const budget = $(event.currentTarget).find('.js-query-budget').val();  
     retrieveData(query,budget);
   
@@ -213,7 +210,14 @@ function displayLoadingMessage(searchTerm){
 }
 
 
+//Insert all GET calls here
+function retrieveData(query,budget){
+    BESTBUYgetDataFromApi(query,budget,BESTBUYdisplaySearchData);
+}
+
 //-------- BEST BUY API -------//
+
+
 
 function BESTBUYgetDataFromApi(searchTerm,budget,callback){
   resetListing();
@@ -229,6 +233,7 @@ function BESTBUYgetDataFromApi(searchTerm,budget,callback){
 
 function BESTBUYdisplaySearchData(data){
   const results = data.products.map((item,index) => BESTBUYrenderResults(item,index));
+  updateListingHeader();
   $('.js-search-results-BESTBUY').html(results);
 }
 
@@ -237,9 +242,14 @@ function BESTBUYrenderResults(results,index){
   BESTBUYaddProductToListing(results);
   return `<div class="bestbuy-result-block col-4" item-index="${index}">
   <p aria-label="[Product Name]" class = "productName" >${results.name}</p>
-  <div class="container"> <img aria-hidden = "true" class ="thumbnail" src="${results.image}"></div> 
+  <div class="container"> <img aria-hidden = "true" class ="thumbnail" src="${results.image}" alt="Best Buy Product Image"></div> 
   <p aria-label="[Price]" class="price bold">$${results.regularPrice}</p></div>
   `;
+}
+
+function BESTBUYgetIndexFromElement(item){
+  const itemIndexString = $(item).closest('.bestbuy-result-block').attr('item-index');
+  return parseInt(itemIndexString,10);
 }
 
 function BESTBUYaddProductToListing(listing){
@@ -249,6 +259,20 @@ function BESTBUYaddProductToListing(listing){
     'price': listing.regularPrice, 
     'description':listing.longDescription, 
     'link':listing.url});
+}
+
+
+function updateListingHeader(){
+  //const budget = $(event.currentTarget).find('.js-query-budget').val();  
+  const budget = $('html').find('#form-budget').val();
+  if(listings_BESTBUY.length > 0){
+    document.getElementById("listing-header").innerHTML = `Search results for ${keyword} under $${budget}`;
+  }
+  else{
+    document.getElementById("listing-header").innerHTML = `No results in this category for '${keyword}' under $${budget}. Try something else!`;
+  }
+  // const headerText = '';
+  $('#listing-header').show();
 }
 
 $(watchSubmit);
