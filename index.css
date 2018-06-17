@@ -24,7 +24,7 @@ body,h1{
 
 main{
   text-align: center; 
-  padding-top: 90px;
+  padding-top: 5%;
   padding-bottom: 20px;
 }
 
@@ -175,7 +175,7 @@ span{
   display: inline-block;
   margin-left: auto;
   margin-right:auto;
-  margin-top: 16px;
+  margin-bottom: 16px;
   background-color: white;
   text-align: center;
   text-decoration: none;
@@ -190,6 +190,10 @@ span{
 .result-block:hover{
   box-shadow: 5px 5px 20px #041e42;
   cursor: pointer;
+}
+
+#listing-header{
+  font-size: 24px;
 }
 
 .BESTBUYURL{
@@ -256,8 +260,7 @@ a{
 }
 
 .thumbnail{
-  margin-top: 10px;
-  width: 70%;
+  padding: 10px;
   border-radius: 2px; 
 }
 
@@ -268,7 +271,7 @@ a{
 
 .container img{
   max-width: 100%;
-  max-height: 60%
+  max-height: 100%;
   -moz-transition: all 11s;
   -webkit-transition: all 9s;
   transition: all 0.5s;
@@ -374,7 +377,7 @@ li{
 
 .BESTBUYImage{
   height: 200px;
-    align-items:center;
+  align-items:center;
 }
 
 .BESTBUYImage img{
