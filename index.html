@@ -23,60 +23,61 @@
         Welcome to Budget Browse
       </h1>
       <h2>
-        Select a category - Set a budget - Search for product
+        Search for product listings within your budget.
       </h2>
     </nav>
 
   <main role= "main">
 
   <form action="#" class="js-search-form">
+    <label for="js-search-form">Select a Category</label>
     <div class="row buttonContainer">
       <div class="col-2 category noSelect inactive" id="computerButton" apiCategory="Computers">
-        <button role ="button" type="button" class="circulerButton noSelect computerButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Computers - Set Category" class="circulerButton noSelect computerButton"></button>
+        <p aria-hidden ="true">
           Computer
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
       
       <div class="col-2 category noSelect inactive" apiCategory="Cell Phones">
-        <button role ="button" type="button" class="circulerButton noSelect mobileButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Cell Phones - Set Category" class="circulerButton noSelect mobileButton"></button>
+        <p aria-hidden ="true">
           Mobile
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
       
       <div class="col-2 category noSelect inactive" apiCategory="Audio">
-        <button role ="button" type="button" class="circulerButton noSelect musicButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Audio - Set Category"  class="circulerButton noSelect musicButton"></button>
+        <p aria-hidden ="true">
           Music
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
       
       <div class="col-2 category noSelect inactive" apiCategory="TV">
-        <button role ="button" type="button" class="circulerButton noSelect televisionButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Television - Set Category" class="circulerButton noSelect televisionButton"></button>
+        <p aria-hidden ="true">
           Television
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
       
       <div class="col-2 category noSelect inactive" apiCategory="Video Games">
-        <button role ="button" type="button" class="circulerButton noSelect gamingButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Video Games - Set Category" class="circulerButton noSelect gamingButton"></button>
+        <p aria-hidden ="true">
           Gaming
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
       
       <div class="col-2 category noSelect inactive" apiCategory="Appliances">
-        <button role ="button" type="button" class="circulerButton noSelect applianceButton"></button>
-        <p>
+        <button role ="button" type="button" aria-label="Appliances - Set Category" class="circulerButton noSelect applianceButton"></button>
+        <p aria-hidden ="true">
           Appliances
         </p>
-        <img class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
+        <img aria-hidden ="true" class ="hide arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Octicons-triangle-up.svg/2000px-Octicons-triangle-up.svg.png">
       </div>
     </div>
 
@@ -102,10 +103,12 @@
   </form>
 
   <div id = "listingsParent"> <!-- This ID is used by hideBackground function to hide product listing from screen reader when a pop up window is displayed -->
-       
+
         <!-- BEST BUY-->
-        <h3 class="source-header">Best Buy Listing</h3>
-        <div class ="row clickForPopUpBESTBUY js-search-results-BESTBUY"></div>
+        <h3 id="listing-header">
+          Best Buy Listing
+        </h3>
+        <div aria-live="assertive" class ="row clickForPopUpBESTBUY js-search-results-BESTBUY"></div>
       </div>
     </main>
     <script src="index.js"></script>
